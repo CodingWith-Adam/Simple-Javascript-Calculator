@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center">Calculator</h1>
+      <div class="alert alert-primary">Nothing but addition :)</div>
+      <input class="form-control" id="number1" />
+      <h1 style="text-align: center">+</h1>
+      <input class="form-control" id="number2" />
+      <button class="btn btn-primary btn-block mb-3 mt-3" id="addButton">
+        Add
+      </button>
+      <div class="alert alert-success">
+        Result <span id="resultTextArea"></span>
+      </div>
+    </div>
+
+    <script>
+      //Variables
+      const number1Input = document.getElementById("number1");
+      const number2Input = document.getElementById("number2");
+      const addButton = document.getElementById("addButton");
+      const resultTextArea = document.getElementById("resultTextArea");
+
+      addButton.addEventListener("click", function () {
+        const value1 = Number(number1Input.value);
+        const value2 = Number(number2Input.value);
+        resultTextArea.innerText = value1 + value2;
+      });
+    </script>
+  </body>
+</html>
